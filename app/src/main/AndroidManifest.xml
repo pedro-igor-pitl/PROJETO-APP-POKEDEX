@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Projeto_pokedex_app"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -89,6 +90,11 @@
         <activity
             android:name=".GhostActivity"
             android:exported="false" />
+        <activity
+            android:name=".PokemonDetailActivity"
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
     </application>
+
 
 </manifest>
