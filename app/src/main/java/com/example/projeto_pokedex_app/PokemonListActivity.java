@@ -21,9 +21,9 @@ public class PokemonListActivity extends AppCompatActivity {
         ListView listViewPokemon = findViewById(R.id.listViewPokemon); // ID da ListView no layout
         dbHelper = new DatabaseHelper(this);
 
-        // Recebendo o número da geração da Intent
-        int generation = getIntent().getIntExtra("generation", 1);
-        List<Pokemon> pokemonList = getPokemonByGeneration(generation);
+        // Recebendo o tipo da Intent
+        String type = getIntent().getStringExtra("type"); // Aqui mudamos para receber o tipo
+        List<Pokemon> pokemonList = getPokemonByType(type); // Alterado para obter Pokémons pelo tipo
 
         ArrayAdapter<Pokemon> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, pokemonList);
         listViewPokemon.setAdapter(adapter);
@@ -39,9 +39,9 @@ public class PokemonListActivity extends AppCompatActivity {
         });
     }
 
-    private List<Pokemon> getPokemonByGeneration(int generation) {
+    private List<Pokemon> getPokemonByType(String type) {
         List<Pokemon> pokemonList = new ArrayList<>();
-        Cursor cursor = dbHelper.getPokemonByGeneration(generation);
+        Cursor cursor = dbHelper.getPokemonByType(type); // Certifique-se de que você tem esse método no seu DatabaseHelper
 
         if (cursor != null && cursor.moveToFirst()) {
             do {
