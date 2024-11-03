@@ -3,7 +3,6 @@ package com.example.projeto_pokedex_app;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,14 +47,20 @@ public class PokemonListActivity extends AppCompatActivity {
             do {
                 String name = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NAME));
                 String type1 = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_TYPE1));
-                String type2 = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_TYPE2));
-                String description = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_DESCRIPTION)); // Obtém a descrição
-                pokemonList.add(new Pokemon(name, type1, type2, description));
+                String type2 = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_TYPE2)); // Lê o segundo tipo, que pode ser nulo
+                String description = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_DESCRIPTION));
+
+                // Adiciona o Pokémon à lista
+                Pokemon pokemon = new Pokemon(name, type1, type2, description);
+                pokemonList.add(pokemon);
             } while (cursor.moveToNext());
-            cursor.close(); // Fecha o cursor após o uso
-        } else if (cursor != null) {
-            cursor.close(); // Fecha o cursor se não houver dados
         }
-        return pokemonList;
+
+        // Fechar o cursor após uso
+        if (cursor != null) {
+            cursor.close();
+        }
+
+        return pokemonList; // Retorna a lista de Pokémon
     }
 }

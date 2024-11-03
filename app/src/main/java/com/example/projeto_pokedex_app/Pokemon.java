@@ -31,6 +31,6 @@ public class Pokemon {
 
     @Override
     public String toString() {
-        return name + " (" + type1 + (type2 != null ? ", " + type2 : "") + ")";
+        return name; // Exibir apenas o nome na ListView
     }
 }

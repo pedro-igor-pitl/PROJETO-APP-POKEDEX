@@ -2,7 +2,6 @@ package com.example.projeto_pokedex_app;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,23 +33,29 @@ public class TypeActivity extends AppCompatActivity {
         ImageView ic_ghost = findViewById(R.id.ic_ghost);
 
         // Definindo os ouvintes de clique para as ImageViews
-        ic_fire.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, FireActivity.class)));
-        ic_flying.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, FlyingActivity.class)));
-        ic_electric.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, ElectricActivity.class)));
-        ic_ice.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, IceActivity.class)));
-        ic_normal.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, NormalActivity.class)));
-        ic_bug.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, BugActivity.class)));
-        ic_water.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, WaterActivity.class)));
-        ic_dark.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, DarkActivity.class)));
-        ic_fighting.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, FightingActivity.class)));
-        ic_psychic.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, PsychicActivity.class)));
-        ic_grass.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, GrassActivity.class)));
-        ic_fairy.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, FairyActivity.class)));
-        ic_dragon.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, DragonActivity.class)));
-        ic_poison.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, PoisonActivity.class)));
-        ic_steel.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, SteelActivity.class)));
-        ic_rock.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, RockActivity.class)));
-        ic_ground.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, GroundActivity.class)));
-        ic_ghost.setOnClickListener(v -> startActivity(new Intent(TypeActivity.this, GhostActivity.class)));
+        ic_fire.setOnClickListener(v -> navigateToPokemonList("Fire"));
+        ic_flying.setOnClickListener(v -> navigateToPokemonList("Flying"));
+        ic_electric.setOnClickListener(v -> navigateToPokemonList("Electric"));
+        ic_ice.setOnClickListener(v -> navigateToPokemonList("Ice"));
+        ic_normal.setOnClickListener(v -> navigateToPokemonList("Normal"));
+        ic_bug.setOnClickListener(v -> navigateToPokemonList("Bug"));
+        ic_water.setOnClickListener(v -> navigateToPokemonList("Water"));
+        ic_dark.setOnClickListener(v -> navigateToPokemonList("Dark"));
+        ic_fighting.setOnClickListener(v -> navigateToPokemonList("Fighting"));
+        ic_psychic.setOnClickListener(v -> navigateToPokemonList("Psychic"));
+        ic_grass.setOnClickListener(v -> navigateToPokemonList("Grass"));
+        ic_fairy.setOnClickListener(v -> navigateToPokemonList("Fairy"));
+        ic_dragon.setOnClickListener(v -> navigateToPokemonList("Dragon"));
+        ic_poison.setOnClickListener(v -> navigateToPokemonList("Poison"));
+        ic_steel.setOnClickListener(v -> navigateToPokemonList("Steel"));
+        ic_rock.setOnClickListener(v -> navigateToPokemonList("Rock"));
+        ic_ground.setOnClickListener(v -> navigateToPokemonList("Ground"));
+        ic_ghost.setOnClickListener(v -> navigateToPokemonList("Ghost"));
+    }
+
+    private void navigateToPokemonList(String type) {
+        Intent intent = new Intent(TypeActivity.this, PokemonListActivity.class);
+        intent.putExtra("type", type);  // Passa o tipo de Pokémon como string
+        startActivity(intent);
     }
 }
