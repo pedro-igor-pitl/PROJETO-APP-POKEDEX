@@ -1,60 +1,98 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/backgroundColor">
 
+    <ImageView
+        android:id="@+id/imageViewFlying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/logo" />
+
+    <!-- Botões de Geração com cores específicas -->
     <Button
         android:id="@+id/btnGen1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/gen1Color"
+        android:textColor="@color/black"
         android:text="Geração 1" />
 
     <Button
         android:id="@+id/btnGen2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/gen2Color"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
         android:text="Geração 2" />
 
     <Button
         android:id="@+id/btnGen3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/gen3Color"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
         android:text="Geração 3" />
 
     <Button
         android:id="@+id/btnGen4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/gen4Color"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
         android:text="Geração 4" />
 
     <Button
         android:id="@+id/btnGen5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/gen5Color"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
         android:text="Geração 5" />
 
     <Button
         android:id="@+id/btnGen6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/gen6Color"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
         android:text="Geração 6" />
 
     <Button
         android:id="@+id/btnGen7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/gen7Color"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
         android:text="Geração 7" />
 
     <Button
         android:id="@+id/btnGen8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/gen8Color"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
         android:text="Geração 8" />
 
     <Button
         android:id="@+id/btnGen9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/gen9Color"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
         android:text="Geração 9" />
+
 </LinearLayout>

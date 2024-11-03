@@ -8,29 +8,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PokemonListActivity extends AppCompatActivity {
+public class FightingActivity extends AppCompatActivity { // Classe para exibir Pokémon do tipo Fighting
 
     private DatabaseHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pokemonlistactivity); // Certifique-se de que o nome do layout está correto
+        setContentView(R.layout.activity_fighting); // Altere para o layout correspondente
 
-        ListView listViewPokemon = findViewById(R.id.listViewPokemon); // ID da ListView no layout
+        ListView listViewFightingPokemon = findViewById(R.id.listViewFightingPokemon); // ID do ListView correspondente
+
         dbHelper = new DatabaseHelper(this);
+        List<String> fightingPokemonList = getPokemonByType("Fighting"); // Buscar Pokémon do tipo "Fighting"
 
-        // Recebendo o número da geração da Intent
-        int generation = getIntent().getIntExtra("generation", 1);
-        List<String> pokemonList = getPokemonByGeneration(generation);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, pokemonList);
-        listViewPokemon.setAdapter(adapter);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, fightingPokemonList);
+        listViewFightingPokemon.setAdapter(adapter);
     }
 
-    private List<String> getPokemonByGeneration(int generation) {
+    private List<String> getPokemonByType(String type) {
         List<String> pokemonList = new ArrayList<>();
-        Cursor cursor = dbHelper.getPokemonByGeneration(generation);
+        Cursor cursor = dbHelper.getPokemonByType(type);
 
         if (cursor.moveToFirst()) {
             do {

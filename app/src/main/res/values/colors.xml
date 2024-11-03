@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="myRedColor">#FF0000</color>
+    <color name="myRedColor">#FF0000</color> <!-- Vermelho -->
+    <color name="myBlueColor">#0000FF</color> <!-- Azul -->
+    <color name="myGreenColor">#00FF00</color> <!-- Verde -->
+    <color name="myYellowColor">#FFFF00</color> <!-- Amarelo -->
+    <color name="myButtonColor">#FFCC00</color> <!-- Amarelo para o botão -->
+    <color name="black">@android:color/black</color>
+    <color name="white">@android:color/white</color>
+    <color name="transparent">@android:color/transparent</color>
+
+        <color name="backgroundColor">#F3F4F6</color>
+        <color name="gen1Color">#FF8A80</color>
+        <color name="gen2Color">#FF80AB</color>
+        <color name="gen3Color">#EA80FC</color>
+        <color name="gen4Color">#B388FF</color>
+        <color name="gen5Color">#8C9EFF</color>
+        <color name="gen6Color">#82B1FF</color>
+        <color name="gen7Color">#80D8FF</color>
+        <color name="gen8Color">#84FFFF</color>
+        <color name="gen9Color">#A7FFEB</color>
+
+
 </resources>
