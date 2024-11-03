@@ -32,14 +32,11 @@ public class PokemonListActivity extends AppCompatActivity {
         // Configurando o listener para cliques na lista
         listViewPokemon.setOnItemClickListener((parent, view, position, id) -> {
             Pokemon clickedPokemon = pokemonList.get(position);
-            // Inicia a PokemonDetailActivity passando os dados do Pokémon
             Intent intent = new Intent(PokemonListActivity.this, PokemonDetailActivity.class);
             intent.putExtra("pokemon_name", clickedPokemon.getName());
             intent.putExtra("pokemon_type", clickedPokemon.getType1() + (clickedPokemon.getType2() != null ? ", " + clickedPokemon.getType2() : ""));
             intent.putExtra("pokemon_description", clickedPokemon.getDescription()); // Passa a descrição
             startActivity(intent);
-            // Se você quiser fechar esta atividade
-            // finish();
         });
     }
 
