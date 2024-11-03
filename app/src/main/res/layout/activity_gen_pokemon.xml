@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnGen1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Geração 1" />
+
+    <Button
+        android:id="@+id/btnGen2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Geração 2" />
+
+    <Button
+        android:id="@+id/btnGen3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Geração 3" />
+
+    <Button
+        android:id="@+id/btnGen4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Geração 4" />
+
+    <Button
+        android:id="@+id/btnGen5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Geração 5" />
+
+    <Button
+        android:id="@+id/btnGen6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Geração 6" />
+
+    <Button
+        android:id="@+id/btnGen7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Geração 7" />
+
+    <Button
+        android:id="@+id/btnGen8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Geração 8" />
+
+    <Button
+        android:id="@+id/btnGen9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Geração 9" />
+</LinearLayout>
