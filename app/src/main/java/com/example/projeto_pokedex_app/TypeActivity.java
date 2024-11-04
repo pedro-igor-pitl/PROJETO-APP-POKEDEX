@@ -12,7 +12,9 @@ public class TypeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_type);
 
+
         // Inicialização das ImageViews
+        ImageView iv_logo = findViewById(R.id.iv_logo);
         ImageView ic_fire = findViewById(R.id.ic_fire);
         ImageView ic_flying = findViewById(R.id.ic_flying);
         ImageView ic_electric = findViewById(R.id.ic_electric);
@@ -51,7 +53,15 @@ public class TypeActivity extends AppCompatActivity {
         ic_rock.setOnClickListener(v -> navigateToPokemonList("Rock"));
         ic_ground.setOnClickListener(v -> navigateToPokemonList("Ground"));
         ic_ghost.setOnClickListener(v -> navigateToPokemonList("Ghost"));
+
+        // Configurando o listener para a logo
+        iv_logo.setOnClickListener(v -> {
+            Intent mainIntent = new Intent(TypeActivity.this, MainActivity.class);
+            startActivity(mainIntent);
+        });
     }
+
+
 
     private void navigateToPokemonList(String type) {
         Intent intent = new Intent(TypeActivity.this, PokemonListActivity.class);

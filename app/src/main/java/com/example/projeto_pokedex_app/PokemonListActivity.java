@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
@@ -20,6 +21,14 @@ public class PokemonListActivity extends AppCompatActivity {
 
         ListView listViewPokemon = findViewById(R.id.listViewPokemon); // ID da ListView no layout
         dbHelper = new DatabaseHelper(this);
+
+        // Configurando o listener de clique na logo
+        ImageView logoImageView = findViewById(R.id.iv_logo); // ID da sua ImageView
+        logoImageView.setOnClickListener(v -> {
+            Intent intent = new Intent(PokemonListActivity.this, MainActivity.class); // Substitua GenActivity pela sua atividade de origem
+            startActivity(intent);
+            finish(); // Se você não quiser que a PokémonListActivity fique na pilha de atividades
+        });
 
         // Recebendo dados da Intent
         Intent intent = getIntent();
