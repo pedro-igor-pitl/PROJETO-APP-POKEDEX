@@ -17,7 +17,7 @@ public class GenerationsActivity extends AppCompatActivity {
     private Button btnGen7;
     private Button btnGen8;
     private Button btnGen9;
-
+    private View  iv_logo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,15 @@ public class GenerationsActivity extends AppCompatActivity {
         btnGen7 = findViewById(R.id.btnGen7);
         btnGen8 = findViewById(R.id.btnGen8);
         btnGen9 = findViewById(R.id.btnGen9);
+        iv_logo = findViewById(R.id.iv_logo);
+
+
+        // Voltar tela
+        iv_logo.setOnClickListener(v -> {
+            // Inicia a GenerationActivity quando o botão GENERATIONS é clicado
+            Intent intent = new Intent(GenerationsActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
 
         // Definindo listeners para os botões
         btnGen1.setOnClickListener(v -> navigateToPokemonList(1));
