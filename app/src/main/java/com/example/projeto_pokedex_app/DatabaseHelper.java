@@ -20,7 +20,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_GENERATION = "generation";
     public static final String COLUMN_DESCRIPTION = "description"; // Adiciona a constante para a nova coluna
 
-
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -40,23 +39,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         addInitialData(db);
     }
 
-    public void addPokemon(String name, String type1, String type2, int generation, String description) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_NAME, name);
-        values.put(COLUMN_TYPE1, type1);
-        values.put(COLUMN_TYPE2, type2);
-        values.put(COLUMN_GENERATION, generation);
-        values.put(COLUMN_DESCRIPTION, description); // Adiciona a descrição
-        db.insert(TABLE_POKEMON, null, values);
-        db.close();
-    }
-
     private void addInitialData(SQLiteDatabase db) {
-        db.execSQL("INSERT INTO " + TABLE_POKEMON + " (" + COLUMN_NAME + ", " + COLUMN_TYPE1 + ", " + COLUMN_TYPE2 + ", " + COLUMN_GENERATION + ", " + COLUMN_DESCRIPTION + ") VALUES ('Caterpie', 'Bug', 'Electric', 1, 'Caterpie é um Pokémon inseto.');");
-        db.execSQL("INSERT INTO " + TABLE_POKEMON + " (" + COLUMN_NAME + ", " + COLUMN_TYPE1 + ", " + COLUMN_TYPE2 + ", " + COLUMN_GENERATION + ", " + COLUMN_DESCRIPTION + ") VALUES ('Weedle', 'Bug', NULL, 1, 'Weedle é um Pokémon inseto e veneno.');");
-        db.execSQL("INSERT INTO " + TABLE_POKEMON + " (" + COLUMN_NAME + ", " + COLUMN_TYPE1 + ", " + COLUMN_TYPE2 + ", " + COLUMN_GENERATION + ", " + COLUMN_DESCRIPTION + ") VALUES ('TESTE', 'Electric', 'Ghost', 5, 'TESTE');");
-        // Continue adicionando os Pokémon conforme necessário
+        PokemonDataSeeder.seedInitialData(db);
     }
 
     @Override
@@ -81,7 +65,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    // Novo método para buscar Pokémon por geração e tipo
     public Cursor getPokemonByGenerationAndType(int generation, String type) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_POKEMON, null,
