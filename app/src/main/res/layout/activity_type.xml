@@ -13,59 +13,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <Button
-        android:id="@+id/btnRock"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_rock"
-        android:text="Rock"
-        android:textColor="@android:color/white"
-        android:background="@drawable/button_background"
-        app:layout_constraintBottom_toTopOf="@+id/btnSteel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp"/>
-
-    <Button
-        android:id="@+id/btnSteel"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_steel"
-        android:text="Steel"
-        android:textColor="@android:color/white"
-        android:background="@drawable/button_background"
-        app:layout_constraintBottom_toTopOf="@+id/btnGhost"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp"/>
-
-    <Button
-        android:id="@+id/btnGhost"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_ghost"
-        android:text="Ghost"
-        android:textColor="@android:color/white"
-        android:background="@drawable/button_background"
-        app:layout_constraintBottom_toTopOf="@+id/btnGround"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp"/>
-
-    <Button
-        android:id="@+id/btnGround"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@drawable/button_background"
-        android:drawableLeft="@drawable/ic_ground"
-        android:text="Ground"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="1851dp" />
+        app:srcCompat="@drawable/logo"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/ic_bug"
