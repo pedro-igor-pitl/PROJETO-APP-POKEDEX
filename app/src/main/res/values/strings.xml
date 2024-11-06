@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">POKEDEX_APP</string>
-    <string name="btn_gen">Generetion</string>
+    <string name="btn_gen">GENERETION</string>
+    <string name="btn_type">TYPE</string>
+    <string name="tv_description">description</string>
+    <string name="tv_type">type</string>
+    <string name="tv_Description">Description</string>
+    <string name="tv_name">name</string>
+    <string name="tv_Type">Type</string>
 </resources>

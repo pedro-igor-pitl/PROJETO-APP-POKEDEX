@@ -39,7 +39,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TYPES"
+        android:text="@string/btn_type"
         android:textColor="@android:color/white"
         android:backgroundTint="@color/myRedColor"
         app:layout_constraintBottom_toBottomOf="parent"

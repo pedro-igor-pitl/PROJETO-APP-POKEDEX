@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">POKEDEX_APP_PT_BR</string>
-    <string name="btn_gen">Geração</string>
+    <string name="btn_gen">GERAÇÕES</string>
+    <string name="btn_type">TIPO</string>
+    <string name="tv_description">descrição</string>
+    <string name="tv_type">tipo</string>
+    <string name="tv_Description">Descrição</string>
+    <string name="tv_name">nome</string>
+    <string name="tv_Type">Tipo</string>
 </resources>
