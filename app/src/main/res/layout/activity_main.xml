@@ -24,7 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="GENERATIONS"
+        android:text="@string/btn_gen"
         android:textColor="@color/white"
         android:backgroundTint="@color/myRedColor"
         app:layout_constraintBottom_toTopOf="@+id/btnTypes"

@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">projeto_pokedex_app</string>
+    <string name="app_name">POKEDEX_APP</string>
+    <string name="btn_gen">Generetion</string>
 </resources>
